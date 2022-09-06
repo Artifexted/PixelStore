@@ -1,7 +1,8 @@
 import React from 'react';
+import ItemCount from './ItemCount';
 
 const Main = () => {
-    let athlonIMG = './athlon200ge.jpg';
+    let athlonIMG = './img/athlon200ge.jpg';
     let athlonTitle = 'Athlon 200ge';
     let athlonSocket = 'AM4';
     let athlonDescr = 'El AMD Athlon 200GE es un procesador de gama baja basado en Raven Ridge, pero que da un rendimiento muy bueno para uso de ofimática, emuladores y navegación por la red. También lo vemos muy interesante para centros multimedia (HTPC) de bajo coste por su interesante tarjeta gráfica VEGA integrada.';
@@ -21,6 +22,8 @@ const Main = () => {
                         <p>{Athlon.socket}</p>
 
                         <p>{Athlon.descr}</p>
+
+                        <ItemCount stock={5} initial={1} onAdd={0} />
                     </div>
                 </div>
             </div>
