@@ -2,3 +2,12 @@
   height: 72px;
   width: 72px;
 }
+
+.card {
+  width: 35em;
+}
+
+.card-container {
+  display: flex;
+  justify-content: space-around;
+}

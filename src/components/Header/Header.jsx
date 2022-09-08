@@ -1,5 +1,5 @@
 import React from 'react';
-import Logo from '../img/pixelstore.png';
+import Logo from '../../img/pixelstore.png';
 import CartWidget from './CartWidget';
 
 const Header = () => {
