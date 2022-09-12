@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import ItemList from './ItemList';
 import aProducts from './Products';
 
@@ -7,7 +7,7 @@ const ItemListContainer = () => {
 
     useEffect(() => {
         const getData = new Promise (resolve => {
-                setTimeout(() => {
+            setTimeout(() => {
                 resolve(aProducts)
             }, 2000);
         });

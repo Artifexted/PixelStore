@@ -14,7 +14,7 @@ export const Item = ({ data }) => {
 
                         <p className="card-text">$ {data.price}</p>
 
-                        <ItemCount stock={data.stock} initial={1} onAdd={0} />
+                        <ItemCount stock={data.stock} initial={0} onAdd={0} />
                     </div>
                 </div>
             </div>

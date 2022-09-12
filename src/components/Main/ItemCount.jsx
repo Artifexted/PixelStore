@@ -21,6 +21,7 @@ const ItemCount = ({ stock, initial, onAdd }) => {
         if(itemAmount <= itemStock) {
             setItemInCart(itemAmount);
             setItemStock(itemStock - itemAmount);
+            setItemAmount(0);
         }
     };
 
