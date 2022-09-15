@@ -1,9 +1,12 @@
 import React, {useState, useEffect} from 'react';
 import ItemDetail from './ItemDetail';
 import aProducts from './Products';
+import { useParams } from 'react-router-dom';
 
 const ItemDetailContainer = () => {
     const [item, setItem] = useState({});
+
+    const { itemID } = useParams();
    
     useEffect(() => {
         const getData = new Promise (resolve => {
@@ -12,11 +15,8 @@ const ItemDetailContainer = () => {
             }, 2000);
         });
 
-        getData.then((res) => {
-            const itemFound = res.find((reply) => reply.id === 1);
-            setItem(itemFound);
-        });
-    }, []);
+        getData.then(res => setItem(res.find(aProducts => aProducts.id === parseInt(itemID))));
+    }, [itemID]);
 
     return (
         <div className='container-fluid'>

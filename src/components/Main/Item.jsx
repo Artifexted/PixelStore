@@ -1,12 +1,15 @@
 import React from 'react';
 import ItemCount from './ItemCount';
+import { NavLink } from 'react-router-dom';
 
 export const Item = ({ data }) => {
     return (
         <div className="card mb-3">
             <div className="row g-0">
                 <div className="col-md-4">
-                    <img src={data.img} className="img-fluid rounded-start" alt={data.title}/>
+                    <NavLink className='nav-link' to={'/item/' + data.id}>
+                        <img src={data.img} className="img-fluid rounded-start" alt={data.title}/>
+                    </NavLink>
                 </div>
                 <div className="col-md-8">
                     <div className="card-body text-center">

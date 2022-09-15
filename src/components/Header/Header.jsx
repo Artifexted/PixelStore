@@ -1,6 +1,7 @@
 import React from 'react';
 import Logo from '../../img/pixelstore.png';
 import CartWidget from './CartWidget';
+import { NavLink } from 'react-router-dom';
 
 const Header = () => {
     return (
@@ -13,13 +14,22 @@ const Header = () => {
                     <div className='collapse navbar-collapse' id='navbarNav'>
                         <ul className='navbar-nav'>
                             <li className='nav-item'>
-                                <a className='nav-link' href='./index.html'>Inicio</a>
+                                <NavLink className='nav-link' to='/'>Inicio</NavLink>
                             </li>
                             <li className='nav-item'>
-                                <a className='nav-link' href='./index.html'>Tienda</a>
+                                <NavLink className='nav-link' to='/cat/mb'>Motherboards</NavLink>
                             </li>
                             <li className='nav-item'>
-                                <a className='nav-link' href='./index.html'>Nosotros</a>
+                                <NavLink className='nav-link' to='/cat/proce'>Procesadores</NavLink>
+                            </li>
+                            <li className='nav-item'>
+                                <NavLink className='nav-link' to='/cat/ram'>Memorias RAM</NavLink>
+                            </li>
+                            <li className='nav-item'>
+                                <NavLink className='nav-link' to='/cat/video'>Placas de Video</NavLink>
+                            </li>
+                            <li className='nav-item'>
+                                <NavLink className='nav-link' to='/item/:itemID'>Detalle</NavLink>
                             </li>
                         </ul>
                     </div>
