@@ -1,52 +1,38 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
-const ItemCount = ({ stock, initial, onAdd }) => {
+export const ItemCount = ({ stock, initial, onAdd }) => {
     const [itemAmount, setItemAmount] = useState(initial);
-    const [itemStock, setItemStock] = useState(stock);
-    const [itemInCart, setItemInCart] = useState(onAdd);
 
-    const decreaseAmount = (value) => {
-        if(value >= 0) {
-            setItemAmount(value);
+    const decreaseAmount = () => {
+        if(itemAmount >= 0) {
+            setItemAmount(itemAmount - 1);
         }
     };
 
     const increaseAmount = (value) => {
-        if(value <= itemStock) {
-            setItemAmount(value);
+        if(itemAmount <= stock) {
+            setItemAmount(itemAmount + 1);
         }
     };
 
-    const addProducts = () => {
-        if(itemAmount <= itemStock) {
-            setItemInCart(itemAmount);
-            setItemStock(itemStock - itemAmount);
-            setItemAmount(0);
-        }
-    };
+    useEffect(() => {
+        setItemAmount(initial);
+    }, [initial]);
 
     return (
-        <div>
+        <div className='text-center'>
             <div className='input-group'>
-                <input type='button' disabled={itemAmount <= 0} className='btn btn-secondary' value='-' onClick={() => {
-                    decreaseAmount(itemAmount - 1);
-                }} />
+                <input type='button' disabled={itemAmount <= 0} className='btn btn-primary' value='-' onClick={decreaseAmount} />
 
-                <input type='text' className='form-control' value={itemAmount} readOnly />
+                <input type='text' className='form-control' value={itemAmount} readOnly/>
 
-                <input type='button' disabled={itemAmount >= itemStock} className='btn btn-secondary' value='+' onClick={() => {
-                    increaseAmount(itemAmount + 1);
-                }} />
+                <input type='button' disabled={itemAmount >= stock} className='btn btn-primary' value='+' onClick={increaseAmount} />
             </div>
 
-            <input type='button' disabled={(itemAmount > itemStock) || (itemAmount <= 0)} className='btn btn-secondary' value='Agregar' onClick={() => {
-                    addProducts();
-            }} />
+            <input type='button' disabled={(itemAmount > stock) || (itemAmount <= 0)} className='btn btn-primary m-2' value='Agregar' onClick={() => onAdd(itemAmount)} />
             
-            <p>Productos comprados: {itemInCart}</p>
-            <p>Cantidad en stock: {itemStock}</p>
+            <p>Cantidad en stock: {stock}</p>
         </div>
-
     );
 };
 

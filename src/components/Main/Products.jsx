@@ -1,4 +1,4 @@
-const aProducts = [
+export const aProducts = [
     { 
         id: 1, 
         title: "Gigabyte A320M-H", 

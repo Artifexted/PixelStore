@@ -3,7 +3,7 @@ import ItemList from './ItemList';
 import aProducts from './Products';
 import { useParams } from 'react-router-dom';
 
-const ItemListContainer = () => {
+export const ItemListContainer = () => {
     const [data, setData] = useState([]);
 
     const { catID } = useParams();

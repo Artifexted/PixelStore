@@ -2,7 +2,7 @@ import React from 'react';
 import ItemDetailContainer from './ItemDetailContainer';
 import ItemListContainer from './ItemListContainer';
 
-const Main = () => {
+export const Main = () => {
     return (
         <main>
             <ItemListContainer />
