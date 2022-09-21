@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 export const Item = ({ data }) => {
     return (
@@ -14,9 +14,9 @@ export const Item = ({ data }) => {
 
                         <p className='card-text'>$ {data.price}</p>
 
-                        <NavLink className='nav-link' to={'/item/' + data.id}>
+                        <Link className='nav-link' to={'/item/' + data.id}>
                             <button className='btn btn-primary'>Ver producto</button>
-                        </NavLink>
+                        </Link>
                     </div>
                 </div>
             </div>
