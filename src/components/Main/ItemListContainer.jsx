@@ -24,7 +24,7 @@ export const ItemListContainer = () => {
  
     return (
         <div className="container-fluid">
-            <h1>PixelStore | Tienda online</h1>
+            <h1 className='centerText'>PixelStore | Tienda online</h1>
             <ItemList allData={data} />
         </div>
     );

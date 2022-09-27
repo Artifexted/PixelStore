@@ -26,14 +26,14 @@ export const ItemDetailed = ({ item }) => {
           goToCart
           ? <Link to='/cart'>
               <button className='btn btn-secondary m-2'>
-                Carrito de compras
+                Finalizar compra
               </button>
             </Link>
           : <ItemCount stock={item.stock} initial={0} onAdd={onAdd} />
         }
 
         <Link to='/'>
-          <button className='btn btn-secondary m-2'>Volver</button>
+          <button className='btn btn-secondary m-2'>Seguir comprando</button>
         </Link>
         
       </div>

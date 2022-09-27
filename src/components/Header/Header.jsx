@@ -36,9 +36,11 @@ const Header = () => {
                     
                     <a className='navbar-brand' href='index.html'><img className='logo' src={Logo} alt='logo de PixelStore' /> PixelStore</a>
 
-                    <button type='button' className='col-1 btn border-0 p-0'>
-                        <CartWidget />
-                    </button>
+                    <NavLink className='nav-link' to='/cart'>
+                        <button type='button' className='col-1 btn border-0 p-0'>
+                            <CartWidget />
+                        </button>
+                    </NavLink>
                 </div>
             </nav>
         </header>
