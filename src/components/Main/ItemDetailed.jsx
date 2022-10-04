@@ -29,7 +29,7 @@ export const ItemDetailed = ({ item }) => {
                 Finalizar compra
               </button>
             </Link>
-          : <ItemCount stock={item.stock} initial={0} onAdd={onAdd} />
+          : <ItemCount stock={item.stock} initial={1} onAdd={onAdd} />
         }
 
         <Link to='/'>

@@ -39,7 +39,7 @@ export const aProducts = [
     { 
         id: 5, 
         title: "AMD Ryzen 5 4500", 
-        descr: "Placa madre con socket AM4, soporta memorias DDR4, tamaño Micro ATX.", 
+        descr: "Procesador AMD Socket AM4 con TDP 65 Watts y temperatura máxima 95 °C.", 
         img: "../../img/products/proce/ryzen5_4000.png", 
         price: 25600, 
         stock: 3, 
@@ -48,7 +48,7 @@ export const aProducts = [
     { 
         id: 6, 
         title: "AMD Ryzen 5 5600g", 
-        descr: "Placa madre con socket AM4, soporta memorias DDR4, tamaño Micro ATX.", 
+        descr: "Procesador AMD Socket AM4. Incluye seis núcleos de CPU, una velocidad de reloj base de 3,9 GHz y siete núcleos de GPU. O sea... ¡Excelentes gráficos integrados!", 
         img: "../../img/products/proce/ryzen5_5000.png", 
         price: 42200, 
         stock: 0, 

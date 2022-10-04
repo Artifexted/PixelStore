@@ -4,16 +4,15 @@ import { useParams } from 'react-router-dom';
 import { getFirestore, doc, getDoc } from 'firebase/firestore';
 
 export const ItemDetailContainer = () => {
-    const [item, setItem] = useState({});
-
     const { itemID } = useParams();
+    const [item, setItem] = useState({});
    
     useEffect(() => {
         const db = getFirestore();
         const response = doc(db, "items", itemID);
 
         getDoc(response).then((snapShot) => {
-            setItem({id: snapShot.itemID, ...snapShot.data()});
+            setItem({id: itemID, ...snapShot.data()});
         });
     }, [itemID]);
 

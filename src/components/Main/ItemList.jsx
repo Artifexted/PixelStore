@@ -5,7 +5,7 @@ export const ItemList = ({ allData = [] }) => {
     return (
         <div className="row card-container">
             { allData.map(result => <Item key={result.id} data={result} />) }
-        </div>  
+        </div>
     );
 }
 

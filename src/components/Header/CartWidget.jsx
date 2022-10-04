@@ -6,18 +6,15 @@ import { useCartContext } from '../../context/CartContext';
 const CartWidget = () => {
     const { totalProducts } = useCartContext();
 
-    if(totalProducts()) {
-        return (
-            <div>
-                <FontAwesomeIcon icon={faCartShopping} />
-                <span className='cartCount'>{totalProducts()}</span>
-            </div>
-        );
-    }
+    const showCount = () => {
+        return totalProducts() ? <span className='cartCount'>{totalProducts()}</span> : false;
+    };
 
     return (
         <div>
             <FontAwesomeIcon icon={faCartShopping} />
+
+            { showCount() }
         </div>
     );
 }
