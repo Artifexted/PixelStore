@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import ItemList from './ItemList';
 import { useParams } from 'react-router-dom';
-import { getFirestore, collection, getDocs, query, where } from 'firebase/firestore';
+import { getFirestore, collection, getDocs, query, where, orderBy } from 'firebase/firestore';
 
 export const ItemListContainer = () => {
     const [data, setData] = useState([]);
@@ -11,7 +11,7 @@ export const ItemListContainer = () => {
     useEffect(() => {
         const db = getFirestore();
         const itemsCollection = collection(db, "items");
-        const queryItems = catID ? query(itemsCollection, where("cat", "==", catID)) : itemsCollection;
+        const queryItems = catID ? query(itemsCollection, where("cat", "==", catID)) : query(itemsCollection, orderBy("order"));
 
         getDocs(queryItems).then((snapShot) => {
             setData(snapShot.docs.map(item => ({id: item.id, ...item.data()})));

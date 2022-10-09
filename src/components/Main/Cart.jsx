@@ -52,6 +52,11 @@ export const Cart = () => {
                 <h1>Gracias por tu compra!</h1>
 
                 <p>Orden de compra N°: {orderID}</p>
+                <p>Nombre: {order.buyer.name}</p>
+                <p>Teléfono: {order.buyer.phone}</p>
+                <p>e-mail: {order.buyer.email}</p>
+                <p>Fecha y hora: {order.date}</p>
+                <h3>TOTAL: ${order.total}</h3>
             </div>
         );
     } else {

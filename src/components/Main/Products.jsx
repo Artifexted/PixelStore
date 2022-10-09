@@ -81,7 +81,7 @@ export const aProducts = [
         img: "../../img/products/video/pny_rtx-3060.png", 
         price: 100000, 
         stock: 2, 
-        cat: "video"  
+        cat: "video" 
     }
 ];
 
