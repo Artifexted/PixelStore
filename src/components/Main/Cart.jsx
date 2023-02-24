@@ -73,15 +73,15 @@ export const Cart = () => {
                     <div className='col-md-4 offset-md-4'>
                         <div className='mb-3'>
                             <label htmlFor='name' className='form-label'>Nombre:</label>
-                            <input type='text' className='form-control' id='name' onInput={(e) => setName(e.target.value)} />
+                            <input type='text' className='form-control' id='name' onInput={(e) => setName(e.target.value)} required />
                         </div>
                         <div className='mb-3'>
                             <label htmlFor='phone' className='form-label'>Teléfono:</label>
-                            <input type='number' className='form-control' id='phone' onInput={(e) => setPhone(e.target.value)} />
+                            <input type='number' className='form-control' id='phone' onInput={(e) => setPhone(e.target.value)} required />
                         </div>
                         <div className='mb-3'>
                             <label htmlFor='email' className='form-label'>e-mail:</label>
-                            <input type='email' className='form-control' id='email' onInput={(e) => setEmail(e.target.value)} />
+                            <input type='email' className='form-control' id='email' onInput={(e) => setEmail(e.target.value)} required />
                         </div>
                     </div>
 
