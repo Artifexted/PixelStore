@@ -1,0 +1,30 @@
+@media (min-width: 991px) {
+	.navbar {
+		margin-right: 8em;
+	}
+}
+
+.navbarToggler {
+	position: absolute;
+	top: 1em;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.cart {
+	position: fixed;
+	right: 1rem;
+	top: 1rem;
+	z-index: 10;
+}
+
+@media (max-width: 991px) {
+	.navbar-collapse {
+		position: absolute;
+		top: 60px;
+		left: 0;
+		right: 0;
+		background-color: white;
+		z-index: 9;
+	}
+}
